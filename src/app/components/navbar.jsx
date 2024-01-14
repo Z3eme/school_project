@@ -20,7 +20,7 @@ function Navbar() {
     <div className="w-[100vw] h-16 font-medium">
       <div className="hidden md:flex justify-between items-center h-full px-8">
         <div className=" dark:text-[#f5f5f5] text-[#191919] text-2xl font-bold">
-          Logo
+          Codifyr
         </div>
         <ul className="flex dark:text-[#f5f5f5] text-[#191919]">
           <li className="px-8">
@@ -42,9 +42,7 @@ function Navbar() {
                 height="24"
                 fill="currentColor"
                 class={`${
-                  darkMode
-                    ? "hidden bi bi-sun-fill"
-                    : "block bi bi-sun-fill"
+                  darkMode ? "hidden bi bi-sun-fill" : "block bi bi-sun-fill"
                 }`}
                 viewBox="0 0 16 16"
               >

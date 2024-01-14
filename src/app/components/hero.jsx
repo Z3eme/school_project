@@ -1,6 +1,5 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import darkMode from "./navbar";
 
 const carouselText = [{ text: "earn programming with us", color: {} }];
 
@@ -28,13 +27,13 @@ function Hero() {
   return (
     <div className="w-full h-[80vh] z-40 m-auto text-center" id="about">
       <h1
-        className="text-[4rem] dark:text-[#f5f5f5] text-[#191919] pt-32"
+        className="text-[2rem] md:text-[4rem] dark:text-[#f5f5f5] text-[#191919] pt-20 md:pt-32 h-[15rem]"
         id="hero"
         style={{ color: carouselText[textIndex].color }}
       >
         L{carouselText[textIndex].text.slice(0, charIndex)}
       </h1>
-      <h1 className="pt-6 dark:text-[#dedede] text-[#0c0c0c]" >
+      <h1 className="pt-6 dark:text-[#dedede] text-[#0c0c0c] max-w-[80%] m-auto" >
         Empower your future with code – Join us, where learning meets limitless
         possibilities!
       </h1>
