@@ -41,7 +41,7 @@ function Navbar() {
                 width="24"
                 height="24"
                 fill="currentColor"
-                class={`${
+                className={`${
                   darkMode ? "hidden bi bi-sun-fill" : "block bi bi-sun-fill"
                 }`}
                 viewBox="0 0 16 16"
@@ -53,7 +53,7 @@ function Navbar() {
                 width="24"
                 height="24"
                 fill="currentColor"
-                class={`${
+                className={`${
                   darkMode
                     ? "block bi bi-moon-stars-fill"
                     : "hidden bi bi-moon-stars-fill"
