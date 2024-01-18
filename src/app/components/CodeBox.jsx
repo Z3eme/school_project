@@ -1,7 +1,5 @@
 import React from "react";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
- 
+
 const CodeBox = ({ code }) => {
   const boxStyle = {
     color: "black",
@@ -12,7 +10,7 @@ const CodeBox = ({ code }) => {
     fontFamily: "monospace",
     width: "60%",
   };
- 
+
   const titleStyle = {
     backgroundColor: "#3d3d3d",
     color: "white",
@@ -21,7 +19,7 @@ const CodeBox = ({ code }) => {
     marginBottom: "1px",
     fontWeight: "bold",
   };
- 
+
   const codeStyle = {
     backgroundColor: "#1c1c1c",
     color: "white",
@@ -29,19 +27,18 @@ const CodeBox = ({ code }) => {
     paddingTop: "4px",
     paddingBottom: "4px",
     borderRadius: "0 0 5px 5px",
- 
   };
- 
+
   return (
     <div style={boxStyle}>
       <div style={titleStyle}>Python</div>
-   
+
       <div style={codeStyle}>
         <p className="pl-4">{code}</p>
       </div>
     </div>
   );
 };
- 
+
 export default CodeBox;
  
