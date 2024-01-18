@@ -110,8 +110,8 @@ function Navbar() {
       <div
         className={`${
           isMenuVisible
-            ? "fixed top-0 h-[100%] w-48 pb-4 ml-0 mb-0 z-[999] flex flex-wrap gap-4 text-center border-r-[1px] dark:border-[#2b2b2b] border-[#dcdcdc]"
-            : "fixed top-0 h-[100%] w-48 z-[999] flex flex-wrap gap-4 text-center ml-[-500px]"
+            ? "fixed top-0 h-[100%] w-48 pb-4 ml-0 mb-0 z-[999] flex flex-wrap gap-4 text-center border-r-[1px] dark:border-[#2b2b2b] border-[#dcdcdc] overflow-hidden"
+            : "fixed top-0 h-[100%] w-48 z-[999] flex flex-wrap gap-4 text-center ml-[-500px] overflow-hidden"
         } ease-in-out duration-[600ms] md:hidden bg-[#f5f5f5] dark:bg-[#191919]`}
       >
         <div className=" dark:text-[#f5f5f5] text-[#191919] text-2xl font-bold pt-4 pl-4 pb-12">

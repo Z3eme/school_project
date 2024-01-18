@@ -55,9 +55,8 @@ export default function Home() {
           Open your editor, create new python file and write simple "Hello
           World" program!
         </p>
-
+        <CodeBox code={firstProgram} className="ml-[50%]" />
       </div>
-      <CodeBox code={firstProgram} />
     </main>
   );
 }
