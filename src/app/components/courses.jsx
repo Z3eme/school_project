@@ -1,14 +1,18 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import CoursesData from "../resources/text/data.json";
-
+ 
 function CourseCard({ darkMode }) {
   const { Courses } = CoursesData;
-
+  const [avaiable, setAvaiable] = useState(true);
+ 
   return (
     <div className="flex flex-wrap justify-center items-start gap-4 w-full max-w-[80%] mx-auto">
       {Courses.map((course, index) => (
-        <div key={index} className="flex flex-col bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-80 mb-4">
+       
+        <div key={index} className="flex flex-col bg-[#f6f6f6] border border-gray-200 rounded-lg shadow dark:bg-[#252525] dark:border-[#252525] w-80 mb-4">
+          <div className={course.avaiable ? "block w-[100%] h-[100%] bg-[#000000]" : "hidden"}>
+          </div>
           <div className="flex flex-wrap items-center">
             <h5 className="pl-2 pt-2 mb-2 md:text-[1.2rem] font-bold tracking-tight dark:text-[#f5f5f5] text-[#191919]">
               {course.name}
@@ -19,7 +23,7 @@ function CourseCard({ darkMode }) {
               className="mt-1 mr-1 ml-auto h-[2rem] w-auto z-50"
             />
           </div>
-
+ 
           <div className="flex-1">
             <p className="mb-3 pl-2 md:text-[1rem] font-normal dark:text-[#f5f5f5] text-[#191919]">
               {course.description}
@@ -53,5 +57,5 @@ function CourseCard({ darkMode }) {
     </div>
   );
 }
-
+ 
 export default CourseCard;

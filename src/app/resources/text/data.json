@@ -1,50 +1,54 @@
 {
-    "Courses": [
-      {
-        "name": "Python - Beginner",
-        "description": "Begin Python journey: essential syntax, problem-solving skills for a solid start!",
-        "img": {
-          "light": "/imgs/python.png",
-          "dark": "/imgs/python.png"
-        },
-        "link": "/python"
+  "Courses": [
+    {
+      "name": "Python - Beginner",
+      "description": "Begin Python journey: essential syntax, problem-solving skills for a solid start!",
+      "img": {
+        "light": "/imgs/python.png",
+        "dark": "/imgs/python.png"
       },
-      {
-        "name": "Javascipt - Beginner",
-        "description": "Delve into JavaScript: master essential syntax and start in web development.",
-        "img": {
-          "light": "/imgs/javascript.png",
-          "dark": "/imgs/javascript.png"
-        },
-        "link": "/javascript"
+      "link": "/python",
+      "avaiable": "true"
+    },
+    {
+      "name": "Javascipt - Beginner",
+      "description": "Delve into JavaScript: master essential syntax and start in web development.",
+      "img": {
+        "light": "/imgs/javascript.png",
+        "dark": "/imgs/javascript.png"
       },
-      {
-        "name": "React Basics",
-        "description": "Explore React fundamentals for building dynamic user interfaces.",
-        "img": {
-          "light": "/imgs/react.png",
-          "dark": "/imgs/react.png"
-        },
-        "link": "/react"
+      "link": "/javascript",
+      "avaiable": "false"
+    },
+    {
+      "name": "React Basics",
+      "description": "Explore React fundamentals for building dynamic user interfaces.",
+      "img": {
+        "light": "/imgs/react.png",
+        "dark": "/imgs/react.png"
       },
-      {
-        "name": "HTML5 & CSS3 Essentials",
-        "description": "Master HTML5 and CSS3 basics for modern web design.",
-        "img": {
-          "light": "/imgs/html.png",
-          "dark": "/imgs/html.png"
-        },
-        "link": "/html-css"
+      "link": "/react",
+      "avaiable": "false"
+    },
+    {
+      "name": "HTML5 & CSS3 Essentials",
+      "description": "Master HTML5 and CSS3 basics for modern web design.",
+      "img": {
+        "light": "/imgs/html.png",
+        "dark": "/imgs/html.png"
       },
-      {
-        "name": "Node.js Crash Course",
-        "description": "Learn Node.js essentials for server-side JavaScript development.",
-        "img": {
-          "light": "/imgs/node.png",
-          "dark": "/imgs/node-dark.png"
-        },
-        "link": "/nodejs"
-      }
-    ]
-  }
-  
+      "link": "/html-css",
+      "avaiable": "false"
+    },
+    {
+      "name": "Node.js Crash Course",
+      "description": "Learn Node.js essentials for server-side JavaScript development.",
+      "img": {
+        "light": "/imgs/node.png",
+        "dark": "/imgs/node-dark.png"
+      },
+      "link": "/nodejs",
+      "avaiable": "false"
+    }
+  ]
+}

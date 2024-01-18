@@ -57,7 +57,6 @@ export default function Home() {
         </p>
         <CodeBox code={firstProgram} />
       </div>
-
     </main>
   );
 }
