@@ -2,7 +2,7 @@ import Navbar from "../components/navbar";
 import CodeBox from "../components/CodeBox";
 
 export default function Home() {
-  const firstProgram = 'console.log("Hello World")';
+  const firstProgram = 'if 5 > 2:\n\tprint("Five is greater than two!")';
 
   return (
     <main className="">
@@ -55,9 +55,9 @@ export default function Home() {
           Open your editor, create new python file and write simple "Hello
           World" program!
         </p>
-
+        <CodeBox code={firstProgram} />
       </div>
-      <CodeBox code={firstProgram} />
+
     </main>
   );
 }

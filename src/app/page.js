@@ -9,8 +9,7 @@ export default function Home() {
     <main className='max-w-[100%] overflow-x-hidden'>
       <Navbar />
       <Hero />
-      <CourseCard/>
+      <CourseCard />
     </main>
   )
 }
- 

@@ -1,30 +1,26 @@
-import React from "react";
-import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
-import { docco } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import React from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { solarizedlight, atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const CodeBox = ({ code }) => {
-  const boxStyle = {
-    backgroundColor: "black",
-    color: "white",
-    border: "1px solid #ccc",
-    padding: "10px",
-    borderRadius: "5px",
-    margin: "10px",
-    fontFamily: "monospace",
-  };
 
-  const titleStyle = {
-    backgroundColor: "gray",
-    padding: "8px",
-    borderRadius: "5px 5px 0 0",
-    marginBottom: "10px",
-    fontWeight: "bold",
+  const buttonStyle = {
+    position: 'absolute',
+    top: '5px',
+    right: '5px',
+    cursor: 'pointer',
+    padding: '5px 10px',
+    backgroundColor: '#007acc',
+    color: 'white',
+    border: 'none',
+    borderRadius: '3px',
+    outline: 'none',
   };
 
   return (
-    <div style={boxStyle}>
-      <div style={titleStyle}>Python</div>
-      <SyntaxHighlighter language="javascript" style={docco}>
+    <div className='bg-black text-white p-[0px] rounded-2xl m-[10px] font-monospace h-auto w-[65%]'>
+      <div className='bg-slate-600 p-[8px] rounded-l m-0 font-bold'>Python</div>
+      <SyntaxHighlighter language="python" style={atomDark}>
         {code}
       </SyntaxHighlighter>
     </div>
