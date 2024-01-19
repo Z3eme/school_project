@@ -55,7 +55,7 @@ export default function Home() {
           Open your editor, create new python file and write simple "Hello
           World" program!
         </p>
-        <CodeBox code={firstProgram} />
+        <CodeBox code={firstProgram}/>
       </div>
     </main>
   );
