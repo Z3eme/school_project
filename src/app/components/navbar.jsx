@@ -17,8 +17,8 @@ function Navbar() {
   }, [darkMode]);
 
   return (
-    <div className="w-[100vw] h-16 font-medium">
-      <div className="hidden md:flex justify-between items-center h-full px-8">
+    <div className="w-[100vw] h-16 font-medium top-0 left-0 right-0 sticky">
+      <div className="hidden md:flex justify-between items-center h-full px-8 ">
         <div className=" dark:text-[#f5f5f5] text-[#191919] text-2xl font-bold">
           Codifyr
         </div>
