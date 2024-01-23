@@ -1,15 +1,12 @@
 import Link from 'next/link';
-import React from 'react'
-import PythonData from './PythonData';
+import React from 'react';
 
-function PaginationBar() {
+function PaginationBar({ index }) {
     return (
         <div>
-            Array.from({length: 10 }, (_, index) => (
-            <Link key={index} href={`/python/${index + 1}`}>
-                {index + 1}
+            <Link key={parseInt(index)} href={`/python/learn${parseInt(index) + 1}`}>
+                {parseInt(index) + 1}
             </Link>
-            ))
         </div>
     )
 }

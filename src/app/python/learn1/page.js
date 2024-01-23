@@ -2,17 +2,16 @@
 import React from "react";
 import Navbar from "../../components/navbar";
 import CodeBox from "../../components/codeBox";
-import Pagging from "../../components/paginationBar";
-
+import Pagging from "../../components/PaginationBar";
+import GetCurrentUrl from "../../components/getCurrentUrl";
 
 export default function Page() {
-  const totalPages = 50
+  const url = GetCurrentUrl();
 
   return (
     <div>
-      <h1>Strona główna</h1>
-
-      <Pagging />
+      <Navbar />
+      <Pagging index={url} />
     </div>
   );
 }
