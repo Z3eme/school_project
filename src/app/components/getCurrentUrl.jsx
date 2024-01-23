@@ -5,8 +5,9 @@ import { usePathname } from 'next/navigation';
 function getCurrentPageFromURL() {
     const pathname = usePathname();
     const currentPageIndex = (pathname.toString()).split("/");
-    const index = (currentPageIndex.toString()).split("learn")[1];
-
+    console.log(currentPageIndex);
+    const index = (currentPageIndex.toString()).split("learn?p=")[2];
+    console.log(index);
     return index;
 }
 

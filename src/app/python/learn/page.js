@@ -7,7 +7,6 @@ import GetCurrentUrl from "../../components/getCurrentUrl";
 
 export default function Page() {
   const url = GetCurrentUrl();
-
   return (
     <div>
       <Navbar />
