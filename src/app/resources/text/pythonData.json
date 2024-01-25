@@ -1,26 +1,50 @@
 {
-    "mainPage": 
+    "pages": 
     [
-        {
-            "title": "1. Install Python",
-            "description": [
-                "Visit the official Python website: Python.org",
-                "Download the latest version of Python (preferably the stable version)",
-                "Run the installer and follow the instruction"
-            ]   
-        },
-        {
-            "title": "2. Integrated Development Environment (IDE)",
-            "description": [
-                "You can use various tools for Python programming. Some popular choices include: PyCharm, Visual Studio Code"
-            ]   
-        },
-        {
-            "title": "3. Your First Program",
-            "description": [
-                "Open your editor, create new python file and write simple 'Hello World' program"
-            ]   
-        }
-    
+        {"1": [
+            {
+                "title": "1. Install Python",
+                "description": [
+                    "Visit the official Python website: Python.org",
+                    "Download the latest version of Python (preferably the stable version)",
+                    "Run the installer and follow the instruction"
+                ]   
+            },
+            {
+                "title": "2. Integrated Development Environment (IDE)",
+                "description": [
+                    "You can use various tools for Python programming. Some popular choices include: PyCharm, Visual Studio Code"
+                ]   
+            },
+            {
+                "title": "3. Your First Program",
+                "description": [
+                    "Open your editor, create new python file and write simple 'Hello World' program"
+                ]   
+            }
+        ]},
+
+        {"1": [
+            {
+                "title": "1. Install Python",
+                "description": [
+                    "Visit the official Python website: Python.org",
+                    "Download the latest version of Python (preferably the stable version)",
+                    "Run the installer and follow the instruction"
+                ]   
+            },
+            {
+                "title": "2. Integrated Development Environment (IDE)",
+                "description": [
+                    "You can use various tools for Python programming. Some popular choices include: PyCharm, Visual Studio Code"
+                ]   
+            },
+            {
+                "title": "3. Your First Program",
+                "description": [
+                    "Open your editor, create new python file and write simple 'Hello World' program"
+                ]   
+            }
+        ]}
     ]
 }

@@ -1,12 +1,15 @@
 "use client";
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 function getCurrentPageFromURL() {
-    const router = useRouter();
-    const { p } = router.query ?? {};
-    const index = p || 1;
+    const pathname = usePathname();
+    console.log(pathname);
+    const currentPageIndex = (pathname.toString()).split("/");
+    console.log(currentPageIndex)
+    const index = (currentPageIndex.toString()).split("learn?p=1")[1];
+    console.log(index)
     return index;
 }
 
-export default getCurrentPageFromURL;
+export default getCurrentPageFromURL
