@@ -15,12 +15,12 @@ export default function Codeblock() {
       {isLoading ? <p>Loading...</p> : <p>Ready!</p>}
       <form>
 
-        <SyntaxHighlighter language="python" style={solarizedlight}>
+
           <textarea
             onChange={(e) => setInput(e.target.value)}
             placeholder="Enter your code here"
           />
-        </SyntaxHighlighter>
+
         <input
           type="submit"
           value={!isRunning ? 'Run' : 'Running...'}

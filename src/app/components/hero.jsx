@@ -25,7 +25,7 @@ function Hero() {
   }, [charIndex, textIndex]);
  
   return (
-    <div className="w-full h-[60vh] md:h-[50vh] z-40 m-auto text-center" id="about">
+    <div className="w-full h-[60vh] md:h-[65vh] z-40 m-auto text-center" id="about">
       <h1
         className="text-[2rem] md:text-[4rem] dark:text-[#f5f5f5] text-[#191919] pt-20 md:pt-32 h-[15rem]"
         id="hero"
