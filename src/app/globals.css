@@ -6,19 +6,19 @@
   font-family: "Poppins-Regular";
   src: url("/fonts/Poppins-Regular.ttf");
 }
+
 a {
   text-decoration: none;
 }
+
 html {
   scroll-behavior: smooth;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
 }
-body {
-  font-family: Poppins-Regular;
-  height: 100%;
-  width: 100%;
 
+body {
+  backdrop-filter: blur(10px);
+  font-family: Poppins-Regular;
   background: rgb(245, 245, 245);
   background: -moz-linear-gradient(
     156deg,
@@ -42,6 +42,7 @@ body {
   margin: 0;
   transition-duration: 600ms;
 }
+
 body.dark {
   background: rgb(25, 25, 25);
   background: -moz-linear-gradient(
