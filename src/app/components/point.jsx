@@ -11,6 +11,7 @@ function Point() {
     const url = parseInt(search);
 
     return (
+        <div className='m-auto'>
         <div className='flex justify-center items-start max-w-[80%] text-black'>
             {pages.map((page, pageIndex) => (
                 pageIndex + 1 === url &&
@@ -19,7 +20,7 @@ function Point() {
                         <div key={index}>
                             {items.map((item, itemIndex) => (
                                 <div key={itemIndex}>
-                                    <h2>{item.title}</h2>
+                                    <h1 className='text-2xl'>{item.title}</h1>
                                     {item.description.map((desc, descIndex) => (
                                         <p key={descIndex}>{desc}</p>
                                     ))}
@@ -29,6 +30,7 @@ function Point() {
                     ))}
                 </div>
             ))}
+        </div>
         </div>
     );
 }

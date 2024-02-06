@@ -11,34 +11,29 @@ export default function Codeblock() {
   const { runPython, stdout, stderr, isLoading, isRunning } = usePython()
 
   return (
-    <>
-      {isLoading ? <p>Loading...</p> : <p>Ready!</p>}
+    <div className="bg-gray-200 m-auto h-auto w-auto">
       <form>
-
-
-          <textarea
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Enter your code here"
-          />
+        <textarea
+          className="resize-none w-[35%] h-[300px]"
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Enter your code here"
+        />
 
         <input
           type="submit"
-          value={!isRunning ? 'Run' : 'Running...'}
+          value={!isRunning ? "Run" : "Running..."}
           disabled={isLoading || isRunning}
           onClick={(e) => {
-            e.preventDefault()
-            runPython(input)
+            e.preventDefault();
+            runPython(input);
           }}
         />
       </form>
-      <p>Output</p>
+      <p>Output: </p>
       <pre>
         <code>{stdout}</code>
-      </pre>
-      <p>Error</p>
-      <pre>
         <code>{stderr}</code>
       </pre>
-    </>
-  )
+    </div>
+  );
 }

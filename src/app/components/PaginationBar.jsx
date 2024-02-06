@@ -14,7 +14,7 @@ function PaginationBar() {
   const amount = pages.length;
 
   return (
-    <div className="dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto">
+    <div className="dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto ">
       {url > 1 ? (
         <Link href={{ pathname: router.pathname, query: { p: url - 1 } }}>
           &lt;
