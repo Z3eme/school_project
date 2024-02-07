@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import pythonData from '../resources/text/pythonData.json';
 import {useRouter} from 'next/navigation';
@@ -11,7 +12,7 @@ function Point() {
     const url = parseInt(search);
 
     return (
-        <div className='m-auto'>
+        <div className='m-auto relative'>
         <div className='flex justify-center items-start max-w-[80%] text-black'>
             {pages.map((page, pageIndex) => (
                 pageIndex + 1 === url &&

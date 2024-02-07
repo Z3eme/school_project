@@ -7,7 +7,7 @@ function CourseCard({ darkMode }) {
   const [avaiable, setAvaiable] = useState(true);
  
   return (
-    <div className="flex flex-wrap justify-center items-start gap-4 w-full max-w-[80%] mx-auto">
+    <div className="flex flex-wrap justify-center items-start gap-4 w-full max-w-[80%] mx-auto" id="courses">
       {Courses.map((course, index) => (
        
         <div key={index} className="flex flex-col bg-[#f6f6f6] border border-gray-200 rounded-lg shadow dark:bg-[#252525] dark:border-[#252525] w-80 mb-4">

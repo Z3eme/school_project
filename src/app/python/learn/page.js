@@ -7,12 +7,19 @@ import SidebarMenu from "@/app/components/sidebarMenu";
 
 export default function Page() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden h-screen w-full flex flex-col overflow-hidden">
       <Navbar />
-      <SidebarMenu />
-      <Point />
-      
-      <PaginationBar />
+      <div className="flex flex-grow w-full">
+        <div className="w-1/4 ">
+          <SidebarMenu />
+        </div>
+        <div className="w-3/4">
+          <Point />
+        </div>
+      </div>
+      <div className="mb-[2%]">
+        <PaginationBar />
+      </div>
     </div>
   );
 }

@@ -20,14 +20,14 @@ function Navbar() {
     <div className="w-[100vw] h-16 font-medium top-0 left-0 right-0 sticky">
       <div className="hidden md:flex justify-between items-center h-full px-8 ">
         <div className=" dark:text-[#f5f5f5] text-[#191919] text-2xl font-bold">
-          Codifyr
+          <a href="/">Codifyr</a>
         </div>
         <ul className="flex dark:text-[#f5f5f5] text-[#191919]">
           <li className="px-8">
-            <a href="#about">About</a>
+            <a href="/#about">About</a>
           </li>
           <li className="px-8">
-            <a href="#">Courses</a>
+            <a href="/#courses">Courses</a>
           </li>
           <li className="px-8">
             <a href="#">
