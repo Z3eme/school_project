@@ -7,8 +7,10 @@ import SidebarMenu from "@/app/components/sidebarMenu";
 
 export default function Page() {
   return (
-    <div className="overflow-x-hidden h-screen w-full flex flex-col overflow-hidden">
-      <Navbar />
+    <div className="overflow-x-hidden h-screen w-full flex flex-col ">
+      <div className="z-[5]">
+        <Navbar />
+      </div>
       <div className="flex flex-grow w-full">
         <div className="w-1/4 z-[999]">
           <SidebarMenu />
