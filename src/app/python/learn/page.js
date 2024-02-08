@@ -10,7 +10,7 @@ export default function Page() {
     <div className="overflow-x-hidden h-screen w-full flex flex-col overflow-hidden">
       <Navbar />
       <div className="flex flex-grow w-full">
-        <div className="w-1/4 ">
+        <div className="w-1/4 z-[999]">
           <SidebarMenu />
         </div>
         <div className="w-3/4">
