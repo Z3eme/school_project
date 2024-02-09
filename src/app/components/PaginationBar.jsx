@@ -7,44 +7,108 @@ import pythonData from "../resources/text/pythonData.json";
 function PaginationBar() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const search = searchParams.get("p") || 1;
-  const url = parseInt(search);
-
+  const searchP = parseInt(searchParams.get("p")) || 1;
+  const searchSp = parseInt(searchParams.get("sp")) || 1;
   const { pages } = pythonData;
-  const amount = pages.length;
+  let sectionsNum = [];
+  let amount = 0;
+  let i = 0;
+  let newP, newSp;
+
+
+  pages.forEach((pageObj) => {
+    i++;
+    Object.values(pageObj).forEach((sections) => {
+      amount += sections.length;
+      sectionsNum.push({ [i]: sections.length });
+    });
+  });
+
+  function checkForSections(direction, p, sp){
+    if(direction == "1"){
+      if(sp == sectionsNum[(p-1)][String(p)]){
+        if(p<amount){
+          p++;
+          sp = 1;
+          [newP, newSp] = [p, sp];
+        }
+      }
+      else{
+        sp++;
+        [newP, newSp] = [p, sp];
+      }
+    }
+    else if(direction == "0"){
+      if(sp == 1){
+        if(p>1){
+          p--;
+          sp = sectionsNum[(p-1)][String(p)];
+          [newP, newSp] = [p, sp];
+        }
+      }
+      else{
+        sp--;
+        [newP, newSp] = [p, sp];
+      
+      }
+    }
+  };
+
+  let j = 0;
+  let found = false;
+  
+  for (let indexP = 0; indexP < pages.length && !found; indexP++) {
+    const chapter = pages[indexP];
+    const sections = Object.values(chapter)[0];
+  
+    for (let indexSp = 0; indexSp < sections.length && !found; indexSp++) {
+      const section = sections[indexSp];
+      j++;
+  
+      if (indexP + 1 == searchP && indexSp + 1 == searchSp) {
+        console.log(j);
+        break;
+      }
+    }
+  }
+
+    
+  
+  let currentPage = j;
+  const totalSections = amount;
 
   return (
-    <div className="dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto ">
-      {url > 1 ? (
-        <Link href={{ pathname: router.pathname, query: { p: url - 1 } }}>
+    <div className="dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto">
+      {currentPage > 1 ? (
+        <Link onClick={checkForSections(0,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           &lt;
         </Link>
       ) : (
         <span className="dark:text-[#9a9a9a] text-[#535353]">&lt;</span>
       )}{" "}
-      {url > 1 && url - 1 > 1 && (
-        <Link href={{ pathname: router.pathname, query: { p: 1 } }}>1 ...</Link>
+      {currentPage > 1 && searchP - 1 > 1 && (
+        <Link href={{ pathname: router.pathname, query: { p: 1, sp: 1 } }}>1 ...</Link>
       )}{" "}
-      {url > 1 && (
-        <Link href={{ pathname: router.pathname, query: { p: url - 1 } }}>
-          {url - 1}
+      {currentPage > 1 && (
+        <Link onClick={checkForSections(0,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
+          {currentPage - 1}
         </Link>
       )}{" "}
-      <Link href={{ pathname: router.pathname, query: { p: url } }}>
-        {url}
+      <Link href={{ pathname: router.pathname, query: { p: searchP } }}>
+        {currentPage}
       </Link>{" "}
-      {url < amount && (
-        <Link href={{ pathname: router.pathname, query: { p: url + 1 } }}>
-          {url + 1}
+      {currentPage < totalSections && (
+        <Link onClick={checkForSections(1,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
+          {}
         </Link>
       )}{" "}
-      {url < amount && url + 1 < amount && (
-        <Link href={{ pathname: router.pathname, query: { p: amount } }}>
+      {currentPage < totalSections && currentPage + 1 < totalSections && (
+        <Link href={{ pathname: router.pathname, query: { p: totalSections } }}>
           {"... " + amount}
         </Link>
       )}{" "}
-      {url < amount ? (
-        <Link href={{ pathname: router.pathname, query: { p: url + 1 } }}>
+      {currentPage < totalSections ? (
+        <Link onClick={checkForSections(1,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           &gt;
         </Link>
       ) : (
@@ -52,6 +116,7 @@ function PaginationBar() {
       )}
     </div>
   );
-}
+      }      
+
 
 export default PaginationBar;

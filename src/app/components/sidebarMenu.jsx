@@ -13,6 +13,8 @@ function SidebarMenu() {
     setMenuVisible(!isMenuVisible);
   };
 
+  
+
   return (
     <div className="fixed left-0 top-[4rem] bottom-0 w-[20rem]">
       {/* Adjusted SVG button logic for visibility and positioning */}
@@ -22,7 +24,7 @@ function SidebarMenu() {
         width="32"
         height="32"
         fill="currentColor"
-        className={`absolute top-4 ${isMenuVisible ? "right-4 rotate-180" : "right-4"}`}
+        className={`absolute top-4 left-[3%] rotate-180`}
         viewBox="0 0 16 16"
         style={{ cursor: 'pointer' }} // Added for better user interaction
       >
@@ -39,7 +41,7 @@ function SidebarMenu() {
         width="32"
         height="32"
         fill="currentColor"
-        className={`absolute top-4 right-4}`}
+        className={`absolute top-4 left-[85%]`}
         viewBox="0 0 16 16"
         style={{ cursor: 'pointer' }} // Added for better user interaction
       >
@@ -56,11 +58,11 @@ function SidebarMenu() {
               onMouseLeave={() => setHoveredIndex(null)}
               className="mb-4 relative"
             >
-              <Link href={{ pathname: router.pathname, query: { p: index + 1 } }}>
+              
                 <p className="border-b-2 border-transparent hover:border-[#5b5b5b] transition-all duration-300 ease-in-out">
-                  {Object.keys(page)[0] + ". " + Object.values(page)[0][0].title + " >>"}
+                  {Object.keys(page)[0] + ".  >>"}
                 </p>
-              </Link>
+              
               {hoveredIndex === index && (
                 <ul className="absolute top-0 left-[60%] bg-[#f5f5f5] border p-2 w-full mt-2 z-[999]">
                   {Object.values(page)[0].map((item, itemIndex) => (
