@@ -14,7 +14,7 @@ function PaginationBar() {
   let amount = 0;
   let i = 0;
   let newP, newSp;
-
+  let currentPage;
 
   pages.forEach((pageObj) => {
     i++;
@@ -62,11 +62,11 @@ function PaginationBar() {
     const sections = Object.values(chapter)[0];
   
     for (let indexSp = 0; indexSp < sections.length && !found; indexSp++) {
-      const section = sections[indexSp];
       j++;
   
       if (indexP + 1 == searchP && indexSp + 1 == searchSp) {
-        console.log(j);
+        currentPage = j;
+        console.log(currentPage);
         break;
       }
     }
@@ -74,7 +74,9 @@ function PaginationBar() {
 
     
   
-  let currentPage = j;
+  
+  console.log(currentPage);
+
   const totalSections = amount;
 
   return (
@@ -86,24 +88,28 @@ function PaginationBar() {
       ) : (
         <span className="dark:text-[#9a9a9a] text-[#535353]">&lt;</span>
       )}{" "}
-      {currentPage > 1 && searchP - 1 > 1 && (
+      {currentPage > 1 && currentPage - 1 > 1 && (
         <Link href={{ pathname: router.pathname, query: { p: 1, sp: 1 } }}>1 ...</Link>
       )}{" "}
+
       {currentPage > 1 && (
         <Link onClick={checkForSections(0,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           {currentPage - 1}
         </Link>
       )}{" "}
+
       <Link href={{ pathname: router.pathname, query: { p: searchP } }}>
         {currentPage}
       </Link>{" "}
+
       {currentPage < totalSections && (
         <Link onClick={checkForSections(1,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
-          {}
+          {currentPage + 1}
         </Link>
       )}{" "}
+
       {currentPage < totalSections && currentPage + 1 < totalSections && (
-        <Link href={{ pathname: router.pathname, query: { p: totalSections } }}>
+        <Link href={{ pathname: router.pathname, query: { p: 6, sp: 3 } }}>
           {"... " + amount}
         </Link>
       )}{" "}
