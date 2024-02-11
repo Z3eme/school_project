@@ -2,14 +2,13 @@ import Link from "next/link";
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
-import pythonData from "../resources/text/pythonData.json";
 
-function PaginationBar() {
+function PaginationBar({ data }) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const searchP = parseInt(searchParams.get("p")) || 1;
   const searchSp = parseInt(searchParams.get("sp")) || 1;
-  const { pages } = pythonData;
+  const { pages } = data;
   let sectionsNum = [];
   let amount = 0;
   let i = 0;
@@ -24,46 +23,46 @@ function PaginationBar() {
     });
   });
 
-  function checkForSections(direction, p, sp){
-    if(direction == "1"){
-      if(sp == sectionsNum[(p-1)][String(p)]){
-        if(p<amount){
+  function checkForSections(direction, p, sp) {
+    if (direction == "1") {
+      if (sp == sectionsNum[(p - 1)][String(p)]) {
+        if (p < amount) {
           p++;
           sp = 1;
           [newP, newSp] = [p, sp];
         }
       }
-      else{
+      else {
         sp++;
         [newP, newSp] = [p, sp];
       }
     }
-    else if(direction == "0"){
-      if(sp == 1){
-        if(p>1){
+    else if (direction == "0") {
+      if (sp == 1) {
+        if (p > 1) {
           p--;
-          sp = sectionsNum[(p-1)][String(p)];
+          sp = sectionsNum[(p - 1)][String(p)];
           [newP, newSp] = [p, sp];
         }
       }
-      else{
+      else {
         sp--;
         [newP, newSp] = [p, sp];
-      
+
       }
     }
   };
 
   let j = 0;
   let found = false;
-  
+
   for (let indexP = 0; indexP < pages.length && !found; indexP++) {
     const chapter = pages[indexP];
     const sections = Object.values(chapter)[0];
-  
+
     for (let indexSp = 0; indexSp < sections.length && !found; indexSp++) {
       j++;
-  
+
       if (indexP + 1 == searchP && indexSp + 1 == searchSp) {
         currentPage = j;
         break;
@@ -71,9 +70,9 @@ function PaginationBar() {
     }
   }
 
-    
-  
-  
+
+
+
   console.log(currentPage);
 
   const totalSections = amount;
@@ -81,7 +80,7 @@ function PaginationBar() {
   return (
     <div className="dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto">
       {currentPage > 1 ? (
-        <Link onClick={checkForSections(0,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
+        <Link onClick={checkForSections(0, searchP, searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           &lt;
         </Link>
       ) : (
@@ -92,7 +91,7 @@ function PaginationBar() {
       )}{" "}
 
       {currentPage > 1 && (
-        <Link onClick={checkForSections(0,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
+        <Link onClick={checkForSections(0, searchP, searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           {currentPage - 1}
         </Link>
       )}{" "}
@@ -102,7 +101,7 @@ function PaginationBar() {
       </Link>{" "}
 
       {currentPage < totalSections && (
-        <Link onClick={checkForSections(1,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
+        <Link onClick={checkForSections(1, searchP, searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           {currentPage + 1}
         </Link>
       )}{" "}
@@ -113,7 +112,7 @@ function PaginationBar() {
         </Link>
       )}{" "}
       {currentPage < totalSections ? (
-        <Link onClick={checkForSections(1,searchP,searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
+        <Link onClick={checkForSections(1, searchP, searchSp)} href={{ pathname: router.pathname, query: { p: newP, sp: newSp } }}>
           &gt;
         </Link>
       ) : (
@@ -121,7 +120,7 @@ function PaginationBar() {
       )}
     </div>
   );
-      }      
+}
 
 
 export default PaginationBar;

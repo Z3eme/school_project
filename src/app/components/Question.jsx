@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation';
 import Intepreter from '../components/PythonInterpreter';
 
 function Question() {
-    const { questions } = quiz;
+    const { pages } = quiz;
     const router = useRouter();
     const searchParams = useSearchParams();
     const search = searchParams.get("p") || 1;
@@ -29,7 +29,7 @@ function Question() {
     return (
         <div className='m-auto relative'>
             <div className='flex justify-center items-start max-w-[80%] text-black'>
-                {questions.map((page, pageIndex) => (
+                {pages.map((page, pageIndex) => (
                     pageIndex + 1 === url &&
                     <div key={pageIndex}>
                         {Object.values(page).map((items, index) => (

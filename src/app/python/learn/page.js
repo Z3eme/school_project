@@ -4,6 +4,7 @@ import Navbar from "../../components/navbar";
 import PaginationBar from "../../components/PaginationBar";
 import Point from "@/app/components/point";
 import SidebarMenu from "@/app/components/sidebarMenu";
+import pythonData from "../../resources/text/pythonData.json";
 
 export default function Page() {
   return (
@@ -20,7 +21,7 @@ export default function Page() {
         </div>
       </div>
       <div className="mb-[2%]">
-        <PaginationBar />
+        <PaginationBar data={pythonData} />
       </div>
     </div>
   );
