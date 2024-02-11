@@ -1,0 +1,69 @@
+{
+    "questions": [
+        {
+            "1": [
+                {
+                    "type": "closed",
+                    "question": "What is the primary purpose of the 'if' statement in Python?",
+                    "answers": [
+                        "To declare a variable",
+                        "To create a loop,",
+                        "To make a decision",
+                        "To define a function"
+                    ],
+                    "correct": "To make a decision"
+                }
+            ]
+        },
+        {
+            "2": [
+                {
+                    "type": "closed",
+                    "question": "How do you comment out a single line of code in Python?",
+                    "answers": [
+                        "Use the // symbol",
+                        "Use the # symbol",
+                        "Use the /* and */ symbols",
+                        "Use the ' symbol"
+                    ],
+                    "correct": "Use the # symbol"
+                }
+            ]
+        },
+        {
+            "3": [
+                {
+                    "type": "closed",
+                    "question": "What is the function of the 'print()' statement in Python?",
+                    "answers": [
+                        "To read user input",
+                        "To display a message on the screen",
+                        "To create a new variable",
+                        "To define a class"
+                    ],
+                    "correct": "To display a message on the screen"
+                }
+            ]
+        },
+        {
+            "4": [
+                {
+                    "type": "open",
+                    "question": "Write function that takes a string as an argument and returns the string in reverse order. Call the function with the argument 'python'",
+                    "answers": [],
+                    "correct": "nohtyp"
+                }
+            ]
+        },
+        {
+            "5": [
+                {
+                    "type": "open",
+                    "question": "Write a function that calculates the average of provided numbers. The program should prompt for consecutive numbers until 0 is entered. Call the function with the numbers 30, 40, 50, 0",
+                    "answers": [],
+                    "correct": "40"
+                }
+            ]
+        }
+    ]
+}
