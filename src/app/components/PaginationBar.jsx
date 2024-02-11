@@ -66,7 +66,6 @@ function PaginationBar() {
   
       if (indexP + 1 == searchP && indexSp + 1 == searchSp) {
         currentPage = j;
-        console.log(currentPage);
         break;
       }
     }
