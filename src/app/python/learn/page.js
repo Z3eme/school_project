@@ -12,11 +12,11 @@ export default function Page() {
       <div className="z-[5]">
         <Navbar />
       </div>
-      <div className="flex flex-grow w-full">
-        <div className="w-1/4 z-[999]">
+      <div className="flex flex-grow w-full z-[5]">
+        <div className="z-[2]">
           <SidebarMenu />
         </div>
-        <div className="w-3/4">
+        <div className="ml-[40%] z-[1]">
           <Point />
         </div>
       </div>

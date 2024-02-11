@@ -118,6 +118,9 @@ function PaginationBar({ data }) {
       ) : (
         <span className="dark:text-[#9a9a9a] text-[#535353]">&gt;</span>
       )}
+      {currentPage == totalSections && (
+        <a href="/python/quiz">Go to quiz</a>
+      )}
     </div>
   );
 }
