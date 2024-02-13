@@ -5,24 +5,35 @@ import PaginationBar from "../../components/PaginationBar";
 import Point from "@/app/components/point";
 import SidebarMenu from "@/app/components/sidebarMenu";
 import pythonData from "../../resources/text/pythonData.json";
+import Intepreter from "../../components/PythonInterpreter";
 
 export default function Page() {
   return (
-    <div className="overflow-x-hidden h-screen w-full flex flex-col ">
-      <div className="z-[5]">
+    <div className="">
+      <div className="">
         <Navbar />
       </div>
-      <div className="flex flex-grow w-full z-[5]">
-        <div className="z-[2]">
+
+      <div className="">
+        <div className="">
           <SidebarMenu />
         </div>
-        <div className="ml-[40%] z-[1]">
-          <Point />
+
+        <div className="flex flex-row items-center flex-wrap gap-60">
+          <div className="">
+            <Point />
+          </div>
+
+          <div className="">
+            <Intepreter correct={""} />
+          </div>
         </div>
       </div>
-      <div className="mb-[2%]">
-        <PaginationBar data={pythonData} />
+
+      <div className="mb-2">
+        <PaginationBar data={pythonData} dataType={"learn"} />
       </div>
     </div>
+
   );
 }

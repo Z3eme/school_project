@@ -1,20 +1,20 @@
 "use client";
 import React, { useState, useEffect } from "react";
- 
+
 const carouselText = [{ text: "earn programming with us", color: {} }];
- 
+
 function Hero() {
   const [textIndex, setTextIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
- 
+
   useEffect(() => {
     const timeout = setTimeout(() => {
       setCharIndex((charIndex) => charIndex + 1);
     }, 100);
- 
+
     return () => clearTimeout(timeout);
   }, [charIndex]);
- 
+
   useEffect(() => {
     if (charIndex === carouselText[textIndex].text.length) {
       setTimeout(() => {
@@ -23,7 +23,7 @@ function Hero() {
       }, 2000);
     }
   }, [charIndex, textIndex]);
- 
+
   return (
     <div className="w-full h-[60vh] md:h-[65vh] z-40 m-auto text-center" id="about">
       <h1
@@ -40,5 +40,5 @@ function Hero() {
     </div>
   );
 }
- 
+
 export default Hero;

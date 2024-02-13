@@ -13,7 +13,7 @@ function page() {
 
       <Question />
 
-      <PaginationBar data={quizData} />
+      <PaginationBar data={quizData} dataType={"quiz"} />
     </div>
   );
 }

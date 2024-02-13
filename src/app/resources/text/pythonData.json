@@ -27,42 +27,48 @@
     {
       "2. Basics": [
         {
-          "title": "1. Function print()",
+          "title": "4. Function print()",
           "description": [
             "It is used to display the output on the screen",
             "You can use the print() function to display text, numbers, and variables"
           ],
-          "code": ["print('Hello World')"]
+          "code": [
+            "print('Hello World')"
+          ]
         },
         {
-          "title": "2. Data Types",
+          "title": "5. Data Types",
           "description": [
             "Int - it is used to store integer values",
             "float - it is used to store decimal values",
             "string - it is used to store text values",
             "boolean - it is used to store True or False values"
           ],
-          "code": ["a = 5 \n b = 5.0 \n c = '5' \n d = True"]
+          "code": [
+            "a = 5\nb = 5.0\nc = '5'\nd = True"
+          ]
         },
         {
-          "title": "3. Variables",
+          "title": "6. Variables",
           "description": [
             "You can print add, subtract, multiply, divide, etc. variables",
             "Your data must be the same type. You cannot add a string to an integer",
             "You can change your data type using the int(), float(), str() functions"
           ],
-          "code": ["print('Hello World' * 5) \n print('Hello' + 'World')"]
+          "code": [
+            "print('Hello World' * 5)\nprint('Hello' + 'World')"
+          ]
         },
         {
-          "title": "4. User Input",
+          "title": "7. User Input",
           "description": [
             "You are able to dynamically change the value of a variable",
             "You can use the input() function to get user input",
             "Remember that input() function always returns a string"
           ],
           "code": [
-            "a = 5 \n print(a) \n a = a + 2 \n print(a)",
-            "name = input('write your name') \n print(name)"
+            "a = 5\nprint(a)\na = a + 2\nprint(a)",
+            "name = input('write your name')\nprint(name)"
           ]
         }
       ]
@@ -70,25 +76,25 @@
     {
       "3. Conditional Statements": [
         {
-          "title": "1. If Statement",
+          "title": "8. If Statement",
           "description": [
             "if - it is used to check if a condition is true. If it is, the code block is executed",
             "else - it is used to execute a block of code if the condition is false",
             "elif - it is used to check multiple conditions. If the previous condition is false, the next condition is checked"
           ],
           "code": [
-            "if 2 == 3: \n \t print('if') \n elif 2 == 2: \n \t print('elif') \n else: \n \t print('else')"
+            "if 2 == 3:\n\tprint('if')\nelif 2 == 2:\n\tprint('elif')\nelse:\n\tprint('else')"
           ]
         },
         {
-          "title": "2. Advanced Conditions",
+          "title": "9. Advanced Conditions",
           "description": [
             "You can use the and, or, not operators to combine multiple conditions",
             "You can use the in, not in operators to check if a value is in a sequence"
           ],
           "code": [
-            "if 2 == 2 and 2 == 3: \n \t print('false')",
-            "if 'a' not in 'alphabet': \n \t print('a is not in alphabet')"
+            "if 2 == 2 and 3 == 3:\n\tprint('true')",
+            "if 'a' in 'alphabet':\n\tprint('a is in alphabet')"
           ]
         }
       ]
@@ -96,27 +102,27 @@
     {
       "4. Loops": [
         {
-          "title": "1. For Loop",
+          "title": "10. For Loop",
           "description": [
             "for - it is used to iterate over a sequence (list, tuple, string, etc.)",
             "You can use the break statement to stop the loop before it has finished",
             "You can use the continue statement to stop the current iteration and continue with the next"
           ],
           "code": [
-            "for letter in ['a', 'b', 'c']: \n \t print(letter)",
-            "for letter in ['a', 'b', 'c']: \n \t if letter == 'b': \n \t\t break"
+            "for letter in ['a', 'b', 'c']:\n\tprint(letter)",
+            "for letter in ['a', 'b', 'c']:\n\tprint(letter)\n\tif letter == 'b':\n\t\tbreak"
           ]
         },
         {
-          "title": "2. While Loop",
+          "title": "11. While Loop",
           "description": [
             "while - it is used to execute a block of code as long as a condition is true",
             "You can use the break statement to stop the loop before it has looped through all the items",
             "You can use the continue statement to skip the current iteration of the loop and continue with the next"
           ],
           "code": [
-            "i = 0 \n while i < 10: \n \t print(i) \n \t i += 1",
-            "i = 0 \n while True: \n \t print(i) \n \t i += 1 \n \t if i == 15: \n \t\t break"
+            "i = 0\nwhile i < 10:\n\tprint(i)\n\ti += 1",
+            "i = 0\nwhile True:\n\tprint(i)\n\ti += 1\n\tif i == 15:\n\t\tbreak"
           ]
         }
       ]
@@ -124,44 +130,44 @@
     {
       "5. Lists": [
         {
-          "title": "1. Introduction to Lists",
+          "title": "12. Introduction to Lists",
           "description": [
             "It is used to store multiple items in a single variable",
             "You can use the append() method to add an item to the end of the list",
             "You can use the insert() method to add an item at a specified index"
           ],
           "code": [
-            "my_list = ['a', 'b', 'c', 'd'] \n print(my_list) \n my_list.append('e') \n print(my_list)"
+            "my_list = ['a', 'b', 'c', 'd']\nprint(my_list)\nmy_list.append('e')\nprint(my_list)"
           ]
         },
         {
-          "title": "2. Managing Lists",
+          "title": "13. Managing Lists",
           "description": [
             "You can use the remove() method to remove an item from the list",
             "You can use the pop() method to remove an item at a specified index"
           ],
           "code": [
-            "my_list = ['a', 'b', 'c', 'd'] \n print(my_list) \n my_list.pop(1) \n print(my_list)"
+            "my_list = ['a', 'b', 'c', 'd']\nprint(my_list)\nmy_list.pop(1)\nprint(my_list)"
           ]
         },
         {
-          "title": "3. More List Operations",
+          "title": "14. More List Operations",
           "description": [
             "You can use the del keyword to remove an item at a specified index",
             "You can use the clear() method to empty the list"
           ],
           "code": [
-            "my_list = ['a', 'b', 'c', 'd'] \n print(my_list) \n del my_list[1] \n print(my_list) \n my_list.clear() \n print(my_list)"
+            "my_list = ['a', 'b', 'c', 'd']\nprint(my_list)\ndel my_list[1]\nprint(my_list)\nmy_list.clear()\nprint(my_list)"
           ]
         },
         {
-          "title": "4. Copying Lists",
+          "title": "15. Copying Lists",
           "description": [
             "You can use the copy() method to copy the list",
             "You can use the list() method to copy the list"
           ],
           "code": [
-            "my_list = ['a', 'b', 'c', 'd'] \n my_list_2 = my_list.copy() \n print(my_list_2)"
+            "my_list = ['a', 'b', 'c', 'd']\nmy_list_2 = my_list.copy()\nprint(my_list_2)"
           ]
         }
       ]
@@ -169,7 +175,7 @@
     {
       "6. Functions": [
         {
-          "title": "1. Basics of Functions",
+          "title": "16. Basics of Functions",
           "description": [
             "DRY - Don't Repeat Yourself",
             "Functions are used to package code into reusable functions",
@@ -177,27 +183,27 @@
             "You need to write function name and () to call it"
           ],
           "code": [
-            "def add_function(a, b): \n \t return a + b \n print(add_function(2, 3))"
+            "def add_function(a, b):\n\treturn a + b\nprint(add_function(2, 3))"
           ]
         },
         {
-          "title": "2. Returning Values",
+          "title": "17. Returning Values",
           "description": [
             "Function can return some value",
             "You can use it to assign value to variable"
           ],
           "code": [
-            "def add_function(a, b): \n \t return a + b \n result = add_function(2, 3) \n print(result)"
+            "def add_function(a, b):\n\treturn a + b\nresult = add_function(2, 3)\nprint(result)"
           ]
         },
         {
-          "title": "3. Function Parameters",
+          "title": "18. Function Parameters",
           "description": [
             "Functions can have parameters",
             "You can use them to pass values to functions"
           ],
           "code": [
-            "def add_function(a, b): \n \t return a + b \n print(add_function(2, 4))"
+            "def add_function(a, b):\n\treturn a + b\nprint(add_function(2, 4))"
           ]
         }
       ]

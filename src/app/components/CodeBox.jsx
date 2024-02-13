@@ -8,19 +8,27 @@ import { useEffect } from "react";
 const CodeBox = ({ code }) => {
 
   return (
-    <div className='bg-black text-white p-[0px] rounded-2xl m-[10px] font-monospace h-auto w-[65%]'>
-      <div className='bg-slate-600 p-[8px] rounded-l m-0 font-bold'>Python</div>
-      <button
-        onClick={() => {
-          navigator.clipboard.writeText(code);
-        }}
-      >
-        Copy
-      </button>
-      <SyntaxHighlighter language="python" style={atomDark}>
-        {code}
-      </SyntaxHighlighter>
+    <div className='bg-black text-white p-0 rounded-2xl m-0 font-monospace h-auto w-30%'>
+      <div className='bg-slate-600 p-2 rounded-l m-0 font-bold flex items-center'>
+        <span className='mr-60 ml-3'>Python</span>
+
+        <button
+          className='text-white font-bold py-2 px-4 rounded'
+          onClick={() => {
+            navigator.clipboard.writeText(code);
+          }}
+        >
+          Copy
+        </button>
+      </div>
+
+      <div className='my-4 text-[110%]'>
+        <SyntaxHighlighter language='python' style={atomDark}>
+          {code}
+        </SyntaxHighlighter>
+      </div>
     </div>
+
   );
 };
 

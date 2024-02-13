@@ -19,32 +19,32 @@ function Point() {
     const sectionExists = pageExists && Object.values(pages[pageIndex])[0].length > subPageIndex;
 
     return (
-        <div className='m-auto relative h-full w-full text-center'>
-            <div className='flex justify-center items-start w-[80%] text-black'>
+        <div className='md:m-auto m-0 h-full w-full text-center md:pl-[43%] pl-5 md:pt-[5%] pt-0'>
+            <div className='flex justify-center w-[50rem] text-black'>
                 {pageExists && sectionExists && (
                     <>
                         {Object.values(pages[pageIndex])[0][subPageIndex] && (
                             <div>
-                                <h1 className='text-xl md:text-2xl text-left dark:text-[#f5f5f5]'>
+                                <h1 className='text-[2rem] md:text-[4rem] text-left dark:text-white'>
                                     {Object.values(pages[pageIndex])[0][subPageIndex].title}
                                 </h1>
                                 <div className='text-left mt-[10%] w-[60%]'>
                                     {Object.values(pages[pageIndex])[0][subPageIndex].description.map((desc, descIndex) => (
-                                        <p key={descIndex} className='dark:text-[#f5f5f5]'>{desc}</p>
+                                        <li key={descIndex} className='dark:text-[#f5f5f5] md:text-[1.5rem] text-[1rem]'>{desc}</li>
                                     ))}
                                 </div>
                                 {/* Add a conditional check before mapping over the 'code' property */}
                                 {Object.values(pages[pageIndex])[0][subPageIndex].code && (
-                                    <div className='mt-[10%] ml-[-5%]'>
+                                    <div className='w-[25rem]'>
                                         {Object.values(pages[pageIndex])[0][subPageIndex].code.map((code, codeIndex) => (
                                             <div key={codeIndex}>
                                                 <CodeBox code={code} />
                                             </div>
                                         ))}
                                     </div>
-                                    
+
                                 )}
-                                
+
                             </div>
                         )}
                     </>

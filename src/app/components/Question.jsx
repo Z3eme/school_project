@@ -13,7 +13,7 @@ function Question() {
     const url = parseInt(search);
 
     const [selectedAnswer, setSelectedAnswer] = useState(null);
-    const [isCorrect, setIsCorrect] = useState(false);
+    const [isCorrect, setIsCorrect] = useState("");
 
     const handleAnswerClick = (answerIndex) => {
         setSelectedAnswer(answerIndex);
@@ -21,10 +21,9 @@ function Question() {
 
     const checkAnswer = (correct, selected) => {
         if (correct == selected) {
-            console.log("Correct");
-            setIsCorrect(true);
+            setIsCorrect("Correct");
         } else {
-            setIsCorrect(false);
+            setIsCorrect("Incorrect");
         }
     }
 
@@ -59,7 +58,7 @@ function Question() {
                                                     >
                                                         Check Answer
                                                     </button>
-                                                    <p className='mt-2'>{isCorrect ? "Correct" : "Incorrect"}</p>
+                                                    <p className='mt-2'>{isCorrect}</p>
                                                 </div>
                                             ) : (
                                                 <Intepreter correct={item.correct} />
