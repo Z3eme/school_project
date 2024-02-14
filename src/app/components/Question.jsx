@@ -36,13 +36,13 @@ function Question() {
                             {Object.values(page).map((items, index) => (
                                 <div key={index}>
                                     {items.map((item, itemIndex) => (
-                                        <div key={itemIndex} className='mb-4'>
-                                            <h1 className='text-2xl mb-2'>{item.question}</h1>
+                                        <div key={itemIndex} className='mb-4 md:ml-60 m-0'>
+                                            <h1 className='dark:text-white md:text-4xl text-2xl mb-2 text-center'>{item.question}</h1>
 
                                             {item.answers.map((desc, descIndex) => (
                                                 <p
                                                     key={descIndex}
-                                                    className={`cursor-pointer inline-block p-2 border rounded ${selectedAnswer === desc ? 'bg-blue-500 text-white' : 'bg-white text-black'
+                                                    className={`cursor-pointer inline-block p-4 md:p-4 md:mt-10 md:text-3xl border rounded ${selectedAnswer === desc ? 'bg-blue-500 text-white' : 'bg-white text-black'
                                                         }`}
                                                     onClick={() => handleAnswerClick(desc)}
                                                 >
@@ -53,14 +53,16 @@ function Question() {
                                             {item.type === 'closed' ? (
                                                 <div className='mt-4'>
                                                     <button
-                                                        className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
+                                                        className='bg-green-500 hover:bg-green-700 text-white  font-bold py-2 px-4 rounded md:px-8 md:py-4 md:text-2xl'
                                                         onClick={() => checkAnswer(item.correct, selectedAnswer)}
                                                     >
                                                         Check Answer
                                                     </button>
-                                                    <p className='mt-2'>{isCorrect}</p>
+                                                    <p className={`mt-2 w-[9rem] text-white text-2xl p-4 rounded-md ${isCorrect === "Correct" ? 'bg-green-500' : isCorrect === "Incorrect" ? 'bg-red-500' : 'bg-white'}`}>{isCorrect}</p>
+
                                                 </div>
                                             ) : (
+
                                                 <Intepreter correct={item.correct} />
                                             )}
                                         </div>
