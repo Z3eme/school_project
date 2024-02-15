@@ -59,9 +59,9 @@
             "5": [
                 {
                     "type": "open",
-                    "question": "Write a function that calculates the average of provided numbers. The program should prompt for consecutive numbers until 0 is entered. Call the function with the numbers 30, 40, 50, 0",
+                    "question": "Write a function that calculates the average of provided numbers. Use list of 30, 40, 50, 0",
                     "answers": [],
-                    "correct": "40"
+                    "correct": "40.0"
                 }
             ]
         }
