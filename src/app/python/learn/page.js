@@ -9,7 +9,7 @@ import Intepreter from "../../components/PythonInterpreter";
 
 export default function Page() {
   return (
-    <div className="">
+    <div className="min-h-screen">
       <div className="">
         <Navbar />
       </div>
@@ -19,7 +19,7 @@ export default function Page() {
           <SidebarMenu />
         </div>
 
-        <div className="flex flex-row items-center flex-wrap gap-60">
+        <div className="flex flex-row items-center flex-wrap gap-10">
           <div className="">
             <Point />
           </div>
@@ -30,7 +30,7 @@ export default function Page() {
         </div>
       </div>
 
-      <div className="mb-2">
+      <div className="sticky top-[100vh] mb-2">
         <PaginationBar data={pythonData} dataType={"learn"} />
       </div>
     </div>

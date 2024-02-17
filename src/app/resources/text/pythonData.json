@@ -130,7 +130,7 @@
     {
       "5. Lists": [
         {
-          "title": "12. Introduction to Lists",
+          "title": "12. Lists",
           "description": [
             "It is used to store multiple items in a single variable",
             "You can use the append() method to add an item to the end of the list",
@@ -151,7 +151,7 @@
           ]
         },
         {
-          "title": "14. More List Operations",
+          "title": "14. List Operations",
           "description": [
             "You can use the del keyword to remove an item at a specified index",
             "You can use the clear() method to empty the list"
@@ -175,7 +175,7 @@
     {
       "6. Functions": [
         {
-          "title": "16. Basics of Functions",
+          "title": "16. Functions",
           "description": [
             "DRY - Don't Repeat Yourself",
             "Functions are used to package code into reusable functions",
@@ -187,7 +187,7 @@
           ]
         },
         {
-          "title": "17. Returning Values",
+          "title": "17. Return",
           "description": [
             "Function can return some value",
             "You can use it to assign value to variable"
@@ -197,7 +197,7 @@
           ]
         },
         {
-          "title": "18. Function Parameters",
+          "title": "18. Parameters",
           "description": [
             "Functions can have parameters",
             "You can use them to pass values to functions"

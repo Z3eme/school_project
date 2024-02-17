@@ -20,7 +20,7 @@ export default function Codeblock({ correct }) {
   };
 
   return (
-    <div className="bg-gray-200 dark:bg-gray-800 dark:text-white p-4 pb-8 ml-20 md:ml-80 mt-10 md:w-[150%] w-[80%] max-w-[50rem] text-2xl">
+    <div className="bg-gray-200 dark:bg-gray-800 dark:text-white p-4 pb-8 ml-20 md:ml-40 mt-10 md:w-[150%] w-[80%] max-w-[50rem] text-2xl">
       <form className="mb-4">
         <textarea
           className="dark:bg-[#141414] resize-none w-[100%] h-[20rem] p-2 border rounded"
