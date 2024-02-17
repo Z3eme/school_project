@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import quiz from '../resources/text/quiz.json';
 import { useRouter } from 'next/navigation';
 import { useSearchParams } from 'next/navigation';
@@ -27,6 +27,10 @@ function Question() {
         }
     }
 
+    useEffect(() => {
+        setIsCorrect('');
+    }, [url]);
+
     return (
         <div className='m-auto relative'>
             <div className='flex justify-center items-start max-w-[80%] text-black'>
@@ -51,14 +55,16 @@ function Question() {
                                             ))}
 
                                             {item.type === 'closed' ? (
-                                                <div className='mt-4'>
+                                                <div className='flex flex-col items-center mt-4'>
                                                     <button
                                                         className='bg-green-500 hover:bg-green-700 text-white  font-bold py-2 px-4 rounded md:px-8 md:py-4 md:text-2xl'
                                                         onClick={() => checkAnswer(item.correct, selectedAnswer)}
                                                     >
                                                         Check Answer
                                                     </button>
-                                                    <p className={`mt-2 w-[9rem] text-white text-2xl p-4 rounded-md ${isCorrect === "Correct" ? 'bg-green-500' : isCorrect === "Incorrect" ? 'bg-red-500' : 'bg-white'}`}>{isCorrect}</p>
+                                                    <p className={`mt-6 w-[23rem] text-white text-center text-7xl p-4 rounded-md ${isCorrect === "Correct" ? 'bg-green-500' : isCorrect === "Incorrect" ? 'bg-red-500' : 'bg-white'}`}>
+                                                        {isCorrect}
+                                                    </p>
 
                                                 </div>
                                             ) : (

@@ -61,7 +61,7 @@
                     "type": "open",
                     "question": "Write a function that calculates the average of provided numbers. Use list of 30, 40, 50, 0",
                     "answers": [],
-                    "correct": "30.0"
+                    "correct": "40.0"
                 }
             ]
         }

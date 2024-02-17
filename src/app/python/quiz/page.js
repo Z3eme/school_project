@@ -8,15 +8,19 @@ import quizData from '../../resources/text/quiz.json'
 
 function page() {
   return (
-    <div className='overflow-x-hidden'>
+    <div className='min-h-screen'>
       <div>
         <Navbar />
       </div>
 
+      <div>
+        <Question />
+      </div>
 
-      <Question />
 
-      <PaginationBar data={quizData} dataType={"quiz"} />
+      <div className='sticky top-[100vh] mb-2'>
+        <PaginationBar data={quizData} dataType={"quiz"} />
+      </div>
     </div>
   );
 }
