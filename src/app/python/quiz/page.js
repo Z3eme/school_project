@@ -8,7 +8,7 @@ import quizData from '../../resources/text/quiz.json'
 
 function page() {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <div>
         <Navbar />
       </div>
