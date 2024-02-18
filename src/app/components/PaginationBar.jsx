@@ -70,11 +70,6 @@ function PaginationBar({ data, dataType }) {
     }
   }
 
-
-
-
-  console.log(currentPage);
-
   const totalSections = amount;
 
   return (

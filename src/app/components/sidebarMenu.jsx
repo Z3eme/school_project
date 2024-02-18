@@ -17,10 +17,9 @@ function SidebarMenu() {
   useEffect(() => {
     setDarkMode(document.body.dark || false);
   }, [isMenuVisible]);
-  console.log(darkMode);
   return (
     <div className="fixed left-0 top-[4rem] bottom-0 w-[20rem] dark:text-[#f5f5f5] text-[#191919]]">
-      {/* Adjusted SVG button logic for visibility and positioning */}
+      
       <svg
         onClick={toggleMenuVisibility}
         xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +28,7 @@ function SidebarMenu() {
         fill="currentColor"
         className={`absolute top-4 left-[3%] rotate-180 dark:text-[#f5f5f5]`}
         viewBox="0 0 16 16"
-        style={{ cursor: 'pointer' }} // Added for better user interaction
+        style={{ cursor: 'pointer' }} 
       >
         <path
           fillRule="evenodd"
@@ -46,7 +45,7 @@ function SidebarMenu() {
           fill="currentColor"
           className={`absolute top-4 left-[85%] dark:text-[#f5f5f5]`}
           viewBox="0 0 16 16"
-          style={{ cursor: 'pointer' }} // Added for better user interaction
+          style={{ cursor: 'pointer' }} 
         >
           <path
             fillRule="evenodd"
