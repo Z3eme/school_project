@@ -78,7 +78,7 @@ function PaginationBar({ data, dataType }) {
   const totalSections = amount;
 
   return (
-    <div className="bottom-0 left-0 right-0 flex flex-col items-center justify-center gap-4 dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto bg-white dark:bg-[#1f1f1f] space-y-2 md:flex-row md:gap-80">
+    <div className="bottom-0 left-0 right-0 flex flex-row items-center gap-4 justify-center dark:text-[#f5f5f5] text-[#191919] text-center m-auto p-auto bg-white dark:bg-[#1f1f1f] space-y-2 md:flex-row md:gap-80">
       {currentPage > 1 ? (
         <Link
           onClick={checkForSections(0, searchP, searchSp)}
@@ -94,7 +94,7 @@ function PaginationBar({ data, dataType }) {
       <div className="flex items-center justify-center">
         {dataType !== "quiz" ? (
           <div className="text-center">
-            <button className="inline-flex items-center justify-center p-2 md:p-0.5 mb-2 me-2 mt-2 md:mt-0 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+            <button className="inline-flex items-center justify-center p-1 md:p-0.5 mb-2 me-2 mt-2 md:mt-0 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
               <span className="relative px-5 py-2.5 md:px-10 md:py-4 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                 <a href="/python/quiz" className="text-gray-900 dark:text-white hover:text-white dark:hover:text-white">
                   Go to Quiz

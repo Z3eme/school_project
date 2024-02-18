@@ -9,7 +9,7 @@ import Intepreter from "../../components/PythonInterpreter";
 
 export default function Page() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen max-w-[100%] overflow-x-hidden m-0 p-0">
       <div className="">
         <Navbar />
       </div>
@@ -24,7 +24,7 @@ export default function Page() {
             <Point />
           </div>
 
-          <div className="">
+          <div className="hidden md:block">
             <Intepreter correct={""} />
           </div>
         </div>

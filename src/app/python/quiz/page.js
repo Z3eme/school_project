@@ -8,14 +8,10 @@ import quizData from '../../resources/text/quiz.json'
 
 function page() {
   return (
-    <div className='min-h-screen'>
-      <div>
-        <Navbar />
-      </div>
+    <div className='min-h-screen max-w-[100%] overflow-x-hidden m-0 p-0'>
+      <Navbar />
 
-      <div>
-        <Question />
-      </div>
+      <Question />
 
 
       <div className='sticky top-[100vh] mb-2'>
